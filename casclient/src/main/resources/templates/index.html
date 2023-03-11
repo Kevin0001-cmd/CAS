@@ -1,0 +1,35 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>主界面</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form action="/client/logout" method="post">-->
+<!--    <input type="text" id="username" name="username" value="requestScope.username">-->
+<!--    <input type="text" id="ticket" name="ticket" value="requestScope.ticket">-->
+<!--    <p><input type="submit" value="立即登出">-->
+<!--    </p>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Insert title here</title>
+</head>
+<body>
+<h1>this is the index.html in templates</h1>
+<form th:action="@{/client/logout}" method="post">
+    <input type="hidden" class="form-control" th:value="${username}" th:object="${username}" name="username"
+    >
+    <input type="hidden" class="form-control" th:value="${ticket}" th:object="${ticket}" name="ticket"
+    >
+    <p><input type="submit" value="立即登出">
+    </p>
+</form>
+</body>
+
+</html>
